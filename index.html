@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majesty Mandi House | Authentic Arabian Mandi in Hanamkonda</title>
+    <meta name="description" content="Experience the legacy of authentic Arabian Mandi at Majesty Mandi House in Hanamkonda. Enjoy our fragrant rice, tender meats, and family-friendly dining.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-majesty">Majesty</span>
+                <span class="logo-mandi">Mandi House</span>
+            </a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#special">Today's Special</a>
+                <a href="#menu">Menu</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="sub-heading">Prasad's Mäjësty Mändi</h2>
+            <h1 class="main-heading">Taste the Legacy</h1>
+            <p class="tagline">Authentic Arabian Mandi in Hanamkonda</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+                <a href="https://wa.me/918121213533?text=Hello%20Majesty%20Mandi%20House,%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="btn btn-secondary">Order on WhatsApp</a>
+                <a href="https://wa.me/918121213533?text=Hello%20Majesty%20Mandi%20House,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" class="btn btn-outline">Reserve Table</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Story</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Experience Authentic Arabian Dining</h3>
+                    <p>Welcome to Majesty Mandi House, where we bring the rich culinary heritage of the Middle East straight to your plate in Greater Warangal. We specialize in authentic Arabian-style mandi preparations, crafted with love and tradition.</p>
+                    <p>Our signature dishes feature fragrant basmati rice slow-cooked with aromatic spices, paired with incredibly tender, fall-off-the-bone meat. Served on large sharing platters, our meals are designed to bring people together.</p>
+                    <p>Whether you're visiting with family, gathering with friends, or looking for a comfortable place to enjoy a hearty meal, our warm hospitality and family-friendly dining atmosphere will make you feel right at home.</p>
+                </div>
+                <div class="about-image-grid">
+                    <div class="img-box"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mandi Preparation"></div>
+                    <div class="img-box"><img src="https://images.unsplash.com/photo-1529042410759-befb1204b468?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Family Dining"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Today's Special Section -->
+    <section class="special section dark-bg" id="special">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Today's Special</h2>
+                <div class="divider center"></div>
+                <p>Curated fresh every day by our master chefs.</p>
+            </div>
+            <div class="special-card" id="special-container">
+                <!-- Dynamically loaded from local storage -->
+                <div class="special-content">
+                    <h3 id="special-name">Loading...</h3>
+                    <p class="special-desc" id="special-desc">Fetching today's exclusive offer...</p>
+                    <div class="special-price-wrap">
+                        <span class="special-price" id="special-price">--</span>
+                        <span class="special-offer" id="special-offer">--</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Menu Section -->
+    <section class="menu section" id="menu">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Our Menu</h2>
+                <div class="divider center"></div>
+            </div>
+            
+            <div class="menu-controls">
+                <input type="text" id="menu-search" placeholder="Search for a dish...">
+                <div class="menu-categories">
+                    <button class="cat-btn active" data-filter="all">All</button>
+                    <button class="cat-btn" data-filter="mandi">Authentic Mandi</button>
+                    <button class="cat-btn" data-filter="chicken-start">Chicken Starters</button>
+                    <button class="cat-btn" data-filter="veg-start">Veg Starters</button>
+                    <button class="cat-btn" data-filter="grilled">Grilled Items</button>
+                    <button class="cat-btn" data-filter="combos">Family Combos</button>
+                </div>
+            </div>
+
+            <div class="menu-grid" id="menu-grid">
+                <!-- Menu items injected via JS -->
+            </div>
+            
+            <div class="print-menu-wrap">
+                <button id="show-qr-btn" class="btn btn-outline"><i class="fas fa-qrcode"></i> Get QR Menu</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="gallery section dark-bg" id="gallery">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Photo Gallery</h2>
+                <div class="divider center"></div>
+            </div>
+            <div class="gallery-grid">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Signature Mandi" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Grilled Dishes" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Indo-Chinese Starters" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Family Dining" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1564834724105-918b73d1b9e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Group Seating" class="gallery-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <!-- Customer Reviews -->
+    <section class="reviews section" id="reviews">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Customer Reviews</h2>
+                <div class="divider center"></div>
+                <div class="rating-badge">
+                    <span class="stars">★★★★★</span>
+                    <span class="score">4.4</span>
+                    <span class="count">(1.3K Google Reviews)</span>
+                </div>
+            </div>
+            <div class="reviews-container">
+                <div class="review-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>"Best Mandi in Hanamkonda! The rice is incredibly fragrant and meat is tender."</p>
+                    <h4>- Rahul R.</h4>
+                </div>
+                <div class="review-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>"Excellent chicken starters and generous portions. Great value for ₹200-400."</p>
+                    <h4>- Priya S.</h4>
+                </div>
+                <div class="review-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>"Perfect ambiance for family gatherings and weekend dinners with friends."</p>
+                    <h4>- Mohammed A.</h4>
+                </div>
+                <div class="review-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>"The authentic Arabian flavors make this place stand out."</p>
+                    <h4>- Vikram K.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pre-Order Section -->
+    <section class="preorder section dark-bg" id="preorder">
+        <div class="container">
+            <div class="preorder-wrapper">
+                <div class="preorder-info">
+                    <h2>Pre-Order for Pickup</h2>
+                    <p>Skip the wait! Order your favorite Mandi and starters in advance via WhatsApp.</p>
+                    <ul class="preorder-steps">
+                        <li><i class="fas fa-check-circle"></i> Fill out the order details</li>
+                        <li><i class="fas fa-check-circle"></i> Choose your pickup time</li>
+                        <li><i class="fas fa-check-circle"></i> Send the auto-generated WhatsApp message</li>
+                    </ul>
+                </div>
+                <div class="preorder-form-container">
+                    <form id="preorder-form">
+                        <input type="text" id="order-name" placeholder="Your Name" required>
+                        <input type="tel" id="order-phone" placeholder="Mobile Number" required>
+                        <textarea id="order-details" placeholder="What would you like to order? (e.g. 1 Chicken Mandi, 1 Chicken 65)" required></textarea>
+                        <input type="time" id="order-time" required>
+                        <button type="submit" class="btn btn-primary w-100">Send Order via WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loyalty Program -->
+    <section class="loyalty section" id="loyalty">
+        <div class="container text-center">
+            <div class="section-header text-center">
+                <h2>Majesty Rewards</h2>
+                <div class="divider center"></div>
+                <p>Join our loyalty program and enjoy royal benefits.</p>
+            </div>
+            <div class="loyalty-grid">
+                <div class="loyalty-card">
+                    <i class="fas fa-gift"></i>
+                    <h3>10th Mandi Free</h3>
+                    <p>Collect points on every order. Your 10th Mandi is on us!</p>
+                </div>
+                <div class="loyalty-card">
+                    <i class="fas fa-birthday-cake"></i>
+                    <h3>Birthday Combo</h3>
+                    <p>Special discounts on combos when you celebrate with us.</p>
+                </div>
+                <div class="loyalty-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Family Deals</h3>
+                    <p>Exclusive offers for large groups and family gatherings.</p>
+                </div>
+                <div class="loyalty-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Festival Offers</h3>
+                    <p>Special menus and discounts during major festivals.</p>
+                </div>
+            </div>
+            
+            <div class="digital-tracker">
+                <h3>Your Digital Points Tracker</h3>
+                <div class="tracker-ui">
+                    <p>Simulate tracking your points below!</p>
+                    <div class="tracker-bar-bg">
+                        <div class="tracker-bar-fill" id="tracker-fill" style="width: 30%;"></div>
+                    </div>
+                    <p><span id="points-count">3</span> / 10 Mandis Ordered</p>
+                    <button class="btn btn-outline btn-sm" id="simulate-order">Add Order</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Form -->
+    <section class="feedback section dark-bg" id="feedback">
+        <div class="container text-center">
+            <div class="section-header text-center">
+                <h2>We Value Your Feedback</h2>
+                <div class="divider center"></div>
+            </div>
+            <form id="feedback-form" class="feedback-form">
+                <input type="text" id="feed-name" placeholder="Name" required>
+                <input type="tel" id="feed-phone" placeholder="Mobile Number" required>
+                <select id="feed-rating" required>
+                    <option value="" disabled selected>Rate your experience</option>
+                    <option value="5">5 Stars - Excellent</option>
+                    <option value="4">4 Stars - Very Good</option>
+                    <option value="3">3 Stars - Average</option>
+                    <option value="2">2 Stars - Poor</option>
+                    <option value="1">1 Star - Terrible</option>
+                </select>
+                <textarea id="feed-message" placeholder="Tell us about your experience..." required></textarea>
+                <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                <p id="feedback-success" class="success-msg" style="display:none; color: #4ade80; margin-top:10px;">Thank you for your feedback!</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact & Maps -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Visit Us</h2>
+                    <div class="divider"></div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>H. No: 5-11-245, 2nd Floor KSR Plaza,<br>Above Arvind Store, Kishanapura, Naimnagar,<br>Hanamkonda, Warangal-506001, Telangana</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>+91 81212 13533</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-instagram"></i>
+                        <p>@Majestyhanamkonda</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <p><strong>Mon - Fri:</strong> 12:00 PM – 11:00 PM</p>
+                            <p><strong>Sat - Sun:</strong> 11:00 AM – 11:30 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3795.335384666504!2d79.5543169752538!3d18.009405682987114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a334f59424afc47%3A0xeab50d3221c56b7!2sKSR%20Plaza!5e0!3m2!1sen!2sin!4v1717600000000!5m2!1sen!2sin" width="100%" height="400" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>Majesty Mandi House</h3>
+                <p>Authentic Arabian Mandi in the heart of Hanamkonda.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/918121213533"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="#about">About Us</a>
+                <a href="#menu">Our Menu</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+                <a href="admin.html" style="color: #666;">Admin Dashboard</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Majesty Mandi House. All Rights Reserved. Designed with <i class="fas fa-heart" style="color:var(--primary-color)"></i></p>
+        </div>
+    </footer>
+
+    <!-- Lead Collection Popup -->
+    <div class="popup-overlay" id="lead-popup">
+        <div class="popup-content">
+            <span class="popup-close" id="close-popup">&times;</span>
+            <div class="popup-header">
+                <h3>Majesty Exclusives</h3>
+                <p>Get Exclusive Family Discounts and Weekend Mandi Offers directly to your WhatsApp!</p>
+            </div>
+            <form id="lead-form">
+                <input type="text" id="lead-name" placeholder="Your Name" required>
+                <input type="tel" id="lead-phone" placeholder="Mobile Number" required>
+                <button type="submit" class="btn btn-primary w-100">Unlock Offers</button>
+            </form>
+            <p id="lead-success" style="display:none; color: #4ade80; margin-top:10px;">You are on the list! Keep an eye on your WhatsApp.</p>
+        </div>
+    </div>
+
+    <!-- QR Modal -->
+    <div class="popup-overlay" id="qr-modal">
+        <div class="popup-content text-center">
+            <span class="popup-close" id="close-qr">&times;</span>
+            <h3>Scan for Menu</h3>
+            <div id="qr-code-img" class="qr-placeholder">
+                <!-- Using a placeholder API for QR -->
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://majestymandihouse.com/menu" alt="Menu QR Code">
+            </div>
+            <div class="hero-buttons" style="margin-top: 20px;">
+                <button class="btn btn-primary" onclick="window.print()">Print QR</button>
+                <a href="https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=https://majestymandihouse.com/menu" download="Majesty_Menu_QR" target="_blank" class="btn btn-outline">Download</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/918121213533?text=Hello%20Majesty%20Mandi%20House,%20I%20would%20like%20to%20place%20an%20order%20or%20reserve%20a%20table." class="floating-wa" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
