@@ -44,11 +44,16 @@
     <nav class="fixed w-full z-50 glass transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <div class="flex flex-col leading-tight cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <span class="font-serif text-gold text-2xl font-bold uppercase tracking-[0.2em] drop-shadow-md">Majesty</span>
-                    <span class="text-xs text-gray-300 tracking-[0.4em] text-right font-light">Mandi House</span>
+                <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <!-- Instructing user to place logo.jpg in folder -->
+                    <img src="logo.jpg" alt="Majesty Logo" class="h-12 w-auto object-contain fallback-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="flex-col leading-tight hidden">
+                        <span class="font-serif text-gold text-2xl font-bold uppercase tracking-[0.2em] drop-shadow-md">Majesty</span>
+                        <span class="text-xs text-gray-300 tracking-[0.4em] text-right font-light">Mandi House</span>
+                    </div>
                 </div>
                 <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-sm uppercase tracking-widest hover:text-gold transition-colors">Our Story</a>
                     <a href="#menu" class="text-sm uppercase tracking-widest hover:text-gold transition-colors">Menu</a>
                     <a href="#reservations" class="text-sm uppercase tracking-widest hover:text-gold transition-colors">Reservations</a>
                     <a href="#gallery" class="text-sm uppercase tracking-widest hover:text-gold transition-colors">Gallery</a>
@@ -108,22 +113,59 @@
         </div>
     </section>
 
+    <!-- About Us Section (NEW to add length) -->
+    <section id="about" class="py-24 bg-dark border-b border-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Restaurant Ambiance" class="rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-gold/20">
+                    <div class="absolute -bottom-8 -right-8 bg-burgundy border border-gold p-6 rounded-lg shadow-2xl hidden md:block">
+                        <p class="font-serif text-3xl text-gold mb-1">10+</p>
+                        <p class="text-sm uppercase tracking-widest text-white">Years of Legacy</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="font-serif text-4xl md:text-5xl text-gold mb-6">Taste The Legacy</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                        At Prasad's Majesty Mandi House, we bring the royal flavors of authentic Arabian cuisine right to the heart of Hanamkonda. Our master chefs use closely guarded traditional recipes, slow-cooking our meats to perfection over fragrant, spice-infused rice.
+                    </p>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                        Whether you're looking for a casual family dinner in our plush A/C comfort cabins, or celebrating a grand milestone, our luxurious ambiance and impeccable service ensure an unforgettable dining experience.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-dark-lighter border border-gold flex items-center justify-center text-gold">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium uppercase tracking-wider text-sm">Wood-Fired</h4>
+                                <p class="text-gray-500 text-xs">Authentic Cooking</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-dark-lighter border border-gold flex items-center justify-center text-gold">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium uppercase tracking-wider text-sm">Fresh Spices</h4>
+                                <p class="text-gray-500 text-xs">Imported Daily</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Curated Menu Section -->
-    <section id="menu" class="py-24 bg-dark relative">
+    <section id="menu" class="py-24 bg-dark-lighter relative border-b border-gold/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="font-serif text-4xl md:text-5xl text-gold mb-4">Explore Our Curated Menu</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-burgundy to-transparent mx-auto"></div>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-burgundy to-transparent mx-auto mb-6"></div>
+                <p class="text-gray-400 max-w-2xl mx-auto">From our signature Mandi platters to fiery Indo-Chinese starters, every dish is crafted to perfection.</p>
             </div>
             
-            <!-- Filter Pills -->
-            <div class="flex flex-wrap justify-center gap-3 mb-12">
-                <button class="px-5 py-2 rounded-full border border-gold text-gold hover:bg-gold hover:text-dark transition text-sm tracking-wider uppercase font-medium">All</button>
-                <button class="px-5 py-2 rounded-full border border-gray-700 text-gray-400 hover:border-gold hover:text-gold transition text-sm tracking-wider uppercase font-medium">Mandi</button>
-                <button class="px-5 py-2 rounded-full border border-gray-700 text-gray-400 hover:border-gold hover:text-gold transition text-sm tracking-wider uppercase font-medium">Starters</button>
-                <button class="px-5 py-2 rounded-full border border-gray-700 text-gray-400 hover:border-gold hover:text-gold transition text-sm tracking-wider uppercase font-medium">Grilled</button>
-            </div>
-
             <!-- Menu Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="menu-container">
                 <!-- Injected via JS -->
@@ -132,9 +174,9 @@
     </section>
 
     <!-- Reservations Section -->
-    <section id="reservations" class="py-24 bg-dark-lighter border-y border-gold/10 relative overflow-hidden">
+    <section id="reservations" class="py-24 bg-dark relative overflow-hidden">
         <!-- Abstract bg element -->
-        <div class="absolute top-0 right-0 w-1/2 h-full bg-burgundy-900/20 blur-3xl rounded-full translate-x-1/2 -translate-y-1/4 pointer-events-none"></div>
+        <div class="absolute top-0 left-0 w-1/2 h-full bg-burgundy-900/20 blur-3xl rounded-full -translate-x-1/2 -translate-y-1/4 pointer-events-none"></div>
         
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="glass-card rounded-xl p-8 md:p-12">
@@ -202,8 +244,8 @@
         </div>
     </section>
 
-    <!-- Fine Dining Gallery -->
-    <section id="gallery" class="py-24 bg-dark">
+    <!-- Fine Dining Gallery (EXPANDED to 6 images) -->
+    <section id="gallery" class="py-24 bg-dark-lighter border-t border-gold/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="font-serif text-4xl text-gold mb-4">Our Fine Dining Gallery</h2>
@@ -223,12 +265,21 @@
                 <div class="group relative rounded-xl overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Grilled Meats" class="w-full h-full object-cover img-zoom-hover">
                 </div>
+                <div class="group relative rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Family Cabins" class="w-full h-full object-cover img-zoom-hover">
+                </div>
+                <div class="group relative rounded-xl overflow-hidden md:col-span-2">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338988a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Fine Dining Layout" class="w-full h-full object-cover img-zoom-hover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <h3 class="text-gold font-serif text-2xl">A/C Comfort Cabins</h3>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="py-24 bg-dark-lighter border-t border-gold/10">
+    <section class="py-24 bg-dark border-t border-gold/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col items-center mb-16 text-center">
                 <div class="text-gold text-3xl mb-2">
@@ -284,8 +335,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
                 <div>
-                    <span class="font-serif text-gold text-2xl font-bold uppercase tracking-[0.2em] block mb-2">Majesty</span>
-                    <span class="text-xs text-gray-400 tracking-[0.4em] block mb-6">Mandi House</span>
+                    <!-- Instructing user to place logo.jpg in folder -->
+                    <img src="logo.jpg" alt="Majesty Logo" class="h-16 w-auto object-contain mb-4 fallback-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                    <div class="hidden mb-6">
+                        <span class="font-serif text-gold text-2xl font-bold uppercase tracking-[0.2em] block mb-2">Majesty</span>
+                        <span class="text-xs text-gray-400 tracking-[0.4em] block">Mandi House</span>
+                    </div>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6">Experience the pinnacle of authentic Arabian dining in a luxurious, family-friendly setting.</p>
                     <div class="flex gap-4">
                         <a href="https://wa.me/918121213533" class="h-10 w-10 rounded-full bg-dark-lighter border border-gray-800 flex items-center justify-center text-gold hover:bg-burgundy hover:border-burgundy transition"><i class="fab fa-whatsapp"></i></a>

@@ -2,14 +2,32 @@
 
 // 1. Menu Data
 const menuData = [
+    // Mandi
     { id: 'm1', name: "Traditional Chicken Mandi", category: "mandi", price: 300, desc: "Fragrant rice with slow-cooked tender chicken.", img: "https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?auto=format&fit=crop&w=600&q=80" },
     { id: 'm2', name: "Traditional Mutton Mandi", category: "mandi", price: 350, desc: "Authentic Arabian style rice with juicy mutton.", img: "https://images.unsplash.com/photo-1589302168068-964664d93cb0?auto=format&fit=crop&w=600&q=80" },
     { id: 'm3', name: "Special Family Mandi Platter", category: "combos", price: 900, desc: "Massive platter with mixed meats for 4-5 people.", img: "https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=600&q=80" },
-    { id: 's1', name: "Chilli Chicken", category: "starters", price: 240, desc: "Spicy Indo-Chinese style chicken bites.", img: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=600&q=80" },
-    { id: 's2', name: "Chicken 65", category: "starters", price: 260, desc: "Classic deep-fried spicy chicken.", img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80" },
-    { id: 's3', name: "Chicken Majestic", category: "starters", price: 260, desc: "Tender chicken strips tossed in yogurt and spices.", img: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=600&q=80" },
-    { id: 's4', name: "Paneer 65", category: "starters", price: 250, desc: "Spicy and tangy fried paneer cubes.", img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80" },
-    { id: 's5', name: "Babycorn Chilli", category: "starters", price: 220, desc: "Crispy baby corn tossed in chilli sauce.", img: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=600&q=80" }
+    
+    // Chicken Starters
+    { id: 'c1', name: "Chilli Chicken", category: "starters", price: 240, desc: "Spicy Indo-Chinese style chicken bites.", img: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=600&q=80" },
+    { id: 'c2', name: "Chicken Manchuria", category: "starters", price: 260, desc: "Tender chicken in savory Manchurian sauce.", img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80" },
+    { id: 'c3', name: "Chicken 65", category: "starters", price: 260, desc: "Classic deep-fried spicy chicken.", img: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=600&q=80" },
+    { id: 'c4', name: "Dragon Chicken", category: "starters", price: 260, desc: "Sweet and spicy chicken strips.", img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80" },
+    { id: 'c5', name: "Chicken 555", category: "starters", price: 260, desc: "Fried chicken tossed in a rich garlic-chilli sauce.", img: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=600&q=80" },
+    { id: 'c6', name: "Chicken Majestic", category: "starters", price: 260, desc: "Tender chicken strips tossed in yogurt and spices.", img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80" },
+    { id: 'c7', name: "Papper Chicken", category: "starters", price: 240, desc: "Chicken stir-fried with crushed black pepper.", img: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=600&q=80" },
+    { id: 'c8', name: "Chicken Lollipop", category: "starters", price: 240, desc: "Crispy coated chicken wings.", img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80" },
+    { id: 'c9', name: "Chicken Drumsticks", category: "starters", price: 260, desc: "Juicy, spiced chicken drumsticks.", img: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=600&q=80" },
+    { id: 'c10', name: "Chicken Wings", category: "starters", price: 240, desc: "Flavorful and spicy fried wings.", img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80" },
+    { id: 'c11', name: "Ginger Chicken", category: "starters", price: 260, desc: "Chicken flavored heavily with fresh ginger.", img: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=600&q=80" },
+
+    // Veg Starters
+    { id: 'v1', name: "Paneer Manchuria", category: "starters", price: 250, desc: "Paneer in savory Manchurian sauce.", img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80" },
+    { id: 'v2', name: "Paneer Chilli", category: "starters", price: 250, desc: "Spicy Indo-Chinese paneer cubes.", img: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=600&q=80" },
+    { id: 'v3', name: "Paneer 65", category: "starters", price: 250, desc: "Spicy and tangy fried paneer cubes.", img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80" },
+    { id: 'v4', name: "Babycorn Chilli", category: "starters", price: 220, desc: "Crispy baby corn tossed in chilli sauce.", img: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=600&q=80" },
+    { id: 'v5', name: "Babycorn Manchurian", category: "starters", price: 220, desc: "Crispy baby corn in Manchurian sauce.", img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80" },
+    { id: 'v6', name: "Babycorn 65", category: "starters", price: 220, desc: "Spicy, deep-fried baby corn.", img: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=600&q=80" },
+    { id: 'v7', name: "Babycorn Pepper", category: "starters", price: 220, desc: "Baby corn stir-fried with crushed pepper.", img: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80" }
 ];
 
 // 2. Render Menu
@@ -17,15 +35,15 @@ const menuContainer = document.getElementById('menu-container');
 
 function renderMenu() {
     menuContainer.innerHTML = menuData.map(item => `
-        <div class="glass-card rounded-xl overflow-hidden group">
-            <div class="h-48 overflow-hidden relative">
+        <div class="glass-card rounded-xl overflow-hidden group flex flex-col h-full">
+            <div class="h-48 overflow-hidden relative shrink-0">
                 <img src="${item.img}" alt="${item.name}" class="w-full h-full object-cover img-zoom-hover">
-                <div class="absolute top-3 right-3 bg-dark/80 backdrop-blur-sm text-gold px-3 py-1 rounded-full text-sm font-bold">₹${item.price}</div>
+                <div class="absolute top-3 right-3 bg-dark/80 backdrop-blur-sm text-gold px-3 py-1 rounded-full text-sm font-bold shadow-lg">₹${item.price}</div>
             </div>
-            <div class="p-6">
-                <h3 class="font-serif text-xl text-white mb-2">${item.name}</h3>
-                <p class="text-gray-400 text-sm mb-6 h-10">${item.desc}</p>
-                <button onclick="addToCart('${item.id}')" class="w-full border border-gold text-gold py-2 rounded uppercase tracking-widest text-sm hover:bg-gold hover:text-dark transition font-semibold">
+            <div class="p-6 flex flex-col flex-grow">
+                <h3 class="font-serif text-xl text-white mb-2 leading-tight">${item.name}</h3>
+                <p class="text-gray-400 text-sm mb-6 flex-grow">${item.desc}</p>
+                <button onclick="addToCart('${item.id}')" class="w-full border border-gold text-gold py-2 rounded uppercase tracking-widest text-sm hover:bg-gold hover:text-dark transition font-semibold mt-auto">
                     + Add to Order
                 </button>
             </div>
@@ -103,11 +121,11 @@ function updateCartUI() {
         
         cartItemsContainer.innerHTML = cart.map(item => `
             <div class="flex justify-between items-center bg-black p-3 rounded-lg border border-gray-800">
-                <div class="flex-1">
-                    <h4 class="text-white text-sm font-serif">${item.name}</h4>
+                <div class="flex-1 pr-2">
+                    <h4 class="text-white text-sm font-serif truncate">${item.name}</h4>
                     <p class="text-gold text-sm font-bold">₹${item.price * item.qty}</p>
                 </div>
-                <div class="flex items-center gap-3 bg-dark-lighter px-2 py-1 rounded">
+                <div class="flex items-center gap-3 bg-dark-lighter px-2 py-1 rounded shrink-0">
                     <button onclick="updateQty('${item.id}', -1)" class="text-gray-400 hover:text-white px-1"><i class="fas fa-minus text-xs"></i></button>
                     <span class="text-white font-bold w-4 text-center">${item.qty}</span>
                     <button onclick="updateQty('${item.id}', 1)" class="text-gray-400 hover:text-white px-1"><i class="fas fa-plus text-xs"></i></button>
